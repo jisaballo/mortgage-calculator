@@ -1,0 +1,116 @@
+@import 'theme';
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    float: left;
+    width: 100%;
+}
+
+.card-content {
+    padding: 5px 12px 5px 12px;
+}
+
+button {
+    color: $light;
+    background-color: $primary;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.button-block {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input[type=range] {
+    height: 32px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px $dark;
+  background: $light-dark;
+  border-radius: 5px;
+  border: 0px solid $dark;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 1px $dark;
+  border: 1px solid $primary;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background: $primary;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10.5px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px $dark;
+  border-radius: 5px;
+  border: 0px solid $dark;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 1px $dark;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $primary;
+  border: 0px solid $dark;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px $dark;
+}
+
+input[type=range]::-ms-fill-upper {
+  border: 0px solid $dark;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px $dark;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 1px $dark;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+  
+input[type=range]:focus::-ms-fill-lower {
+  background: $primary;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  
+}  

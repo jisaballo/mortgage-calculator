@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body class="container-fluid">
+        <h2 class="header">Mortgage Calculator</h2>
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Change values to calculate your results</p>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="strong">Years of mortgage</div>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col-1 slider-position text-muted">1</div>
+                            <div class="col-6">
+                                <input class="slider" id="loan_term" onchange="updateYearsSlider(this.value)" type="range" min="1" max="40" value="30" step="1">
+                            </div>
+                            <div class="col-1 slider-position text-muted">40</div>
+                            <div class="col-3">
+                                <div id="loan_term_value" class="selected_value">30</div>
+                            </div>
+                        </div>
+            
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="strong">Rate of interest (%)</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 slider-position text-muted">0.5</div>
+                            <div class="col-6">
+                                <input class="slider" id="interest_rate" onchange="updateInterestSlider(this.value)" type="range" min="0.5" max="10" value="8" step="0.5">
+                            </div>
+                            <div class="col-1 slider-position text-muted">10</div>
+                            <div class="col-3">
+                                <div id="interest_rate_value" class="selected_value">6.5</div>
+                            </div>
+                        </div>
+            
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-label">Loan amount</div>
+                                <input class="input-box" id="loan_amount" type="number" placeholder="Loan Amount" value="100000">
+                                <span class="text-error" id="loan_amount_error"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-label">Annual Tax</div>
+                                <input class="input-box" id="annual_tax" type="number" placeholder="Annual Tax" value="1000">
+                                <span class="text-error" id="annual_tax_error"></span>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-label">Annual Insurance</div>
+                                <input class="input-box" id="annual_insurance" type="number" placeholder="Annual Insurance" value="300">
+                                <span class="text-error" id="annual_insurance_error"></span>
+                            </div>
+                        </div>
+                        
+                        <br>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="button-block collapsible" type="button" onclick="calculate()">CALCULATE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div id="content" class="content">
+                    <span class="result-header">Your results</span>
+                    <div class="row">
+                        <div class="col-auto text-muted"><span>Principle & Interest</span></div>
+                        <div class="col text-right text-muted text-strong"><span id="base"></span></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-auto text-muted"><span>Tax</span></div>
+                        <div class="col text-right text-muted text-strong"><span id="tax"></span></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-auto text-muted"><span>Insurance</span></div>
+                        <div class="col text-right text-muted text-strong"><span id="insurance"></span></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-auto text-muted"><span>Total Monthly Payment</span></div>
+                        <div class="col text-right text-muted text-strong"><span id="total"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- all script files -->
+        <script src="./assets/js/functions.js"></script>
+        <script src="./assets/js/slider.js"></script>
+    </body>
+</html>

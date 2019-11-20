@@ -1,0 +1,75 @@
+@import 'base';
+@import 'theme';
+@import './layout/bootstrap-grid';
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  color: $primary;
+}
+
+.input-label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.input-box {
+  border: 1px solid $light-dark;
+  border-radius: 3px;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.selected_value {
+  text-align: center;
+  border: 1px solid $light-dark;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  background-color: $cyan;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+
+  .row {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+span {
+  font-size: 14px;
+}
+
+.slider-position {
+  margin-top: 16px;
+}
+
+.text-strong {
+  font-weight: bold;
+}
+
+.text-muted {
+  color: $light-dark;
+}
+
+.result-header {
+  padding-top: 18px;
+  display: block;
+  font-size: 24px;
+  color: $dark;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-error {
+  color: $danger;
+}
