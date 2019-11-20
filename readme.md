@@ -1,5 +1,7 @@
 Mortgage Calculator
 
+    Allow users to determine monthly repayments, determine the financial suitability of a home loan applicant.
+
 Install 
 
     Execute "npm install" to install dependencies
