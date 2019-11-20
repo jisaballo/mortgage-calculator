@@ -1,2 +1,8 @@
-1.- Execute "npm install" to install dependencies
-2.- Open a terminal an type "gulp watch" for change on scss files
+Mortgage Calculator
+
+Install 
+
+    Execute "npm install" to install dependencies
+
+Scss
+    Open a terminal an type "gulp watch" for change on scss files
