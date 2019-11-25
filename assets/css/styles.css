@@ -5,6 +5,7 @@ body {
 
 input {
   width: 100%;
+  border: 0;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -123,6 +124,7 @@ body {
 
 input {
   width: 100%;
+  border: 0;
 }
 
 /*!
@@ -11689,6 +11691,10 @@ html {
 }
 
 
+
+
+
+
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -16027,6 +16033,3 @@ html {
     display: inline-flex !important;
   }
 }
-
-
-

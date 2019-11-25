@@ -7,13 +7,8 @@ const calculate = function mortgageCalculator() {
     const annualInsurance = document.getElementById("annual_insurance").value;
 
     if (valid()) {
-        var content = document.getElementById("content");
 
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
+        showPanel();
 
         const base = ((interestRate / 100) / 12)* loanAmount / (1-Math.pow((1 + ((interestRate / 100)/12)), -yearsOfMortgage * 12));
         const tax = annualTax / 12;
@@ -49,4 +44,18 @@ const valid = function checkValidValues() {
         valid = false;
     } 
     return valid;
+}
+
+window.onload = function() {
+    window.screen.orientation.type === 'landscape-primary' || window.screen.orientation.type === 'landscape-secondary' ? showPanel() : hidePanel();
+};
+
+const showPanel = function showResultPanel() {
+    var content = document.getElementById("content");
+    content.style.maxHeight = content.scrollHeight + "px";
+}
+
+const hidePanel = function hideResultPanel() {
+    var content = document.getElementById("content");
+    content.style.maxHeight = null;
 }
