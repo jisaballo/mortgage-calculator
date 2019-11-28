@@ -31,19 +31,51 @@
 /* Style the collapsible content. Note: hidden by default */
 .content {
   background-color: $cyan;
-  padding: 0 18px;
+  padding: 0 14px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 
+  .bottom-border-mobile {
+    @media (max-width: 768px) {
+      border-bottom: 1px solid gray;
+    }
+  }
+
+  .bottom-border-desktop {
+    @media (min-width: 768px) {
+      border-bottom: 1px solid gray;
+    }
+  }
+  
+
   .row {
     margin-top: 16px;
-    margin-bottom: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    @media (max-width: 768px) {
+      text-align: right;
+    }
+    @media (min-width: 768px) {
+      text-align: left;
+      display: block;
+      .col {
+        padding-top: 10px;
+        span {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
 
 span {
-  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .slider-position {

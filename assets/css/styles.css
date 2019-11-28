@@ -8,7 +8,8 @@ input {
   border: 0;
 }
 .container {
-  padding: 2px 16px;
+  margin: 0 8px 0 8px;
+  padding: 2px 14px;
 }
 
 .card {
@@ -18,8 +19,16 @@ input {
   width: 100%;
 }
 
-.card-content {
-  padding: 5px 12px 5px 12px;
+@media (max-width: 768px) {
+  .card-content {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-content {
+    padding: 36px;
+  }
 }
 
 button {
@@ -5442,19 +5451,61 @@ html {
 
 .content {
   background-color: #eaf6fa;
-  padding: 0 18px;
+  padding: 0 14px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
 
-.content .row {
-  margin-top: 16px;
-  margin-bottom: 16px;
+@media (max-width: 768px) {
+  .content .bottom-border-mobile {
+    border-bottom: 1px solid gray;
+  }
 }
 
-span {
-  font-size: 14px;
+@media (min-width: 768px) {
+  .content .bottom-border-desktop {
+    border-bottom: 1px solid gray;
+  }
+}
+
+.content .row {
+  margin-top: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .content .row {
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .content .row {
+    text-align: left;
+    display: block;
+  }
+
+  .content .row .col {
+    padding-top: 10px;
+  }
+
+  .content .row .col span {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  span {
+    font-size: 16px;
+  }
 }
 
 .slider-position {

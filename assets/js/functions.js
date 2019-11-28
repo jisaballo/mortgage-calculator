@@ -47,12 +47,17 @@ const valid = function checkValidValues() {
 }
 
 window.onload = function() {
+    document.getElementById("base").innerHTML = '$ - -';
+    document.getElementById("tax").innerHTML = '$ - -';
+    document.getElementById("insurance").innerHTML = '$ - -';
+    document.getElementById("total").innerHTML = '$ - -';
+
     window.screen.orientation.type === 'landscape-primary' || window.screen.orientation.type === 'landscape-secondary' ? showPanel() : hidePanel();
 };
 
 const showPanel = function showResultPanel() {
     var content = document.getElementById("content");
-    content.style.maxHeight = content.scrollHeight + "px";
+    content.style.maxHeight = content.scrollHeight + 100 + "px";
 }
 
 const hidePanel = function hideResultPanel() {
